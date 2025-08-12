@@ -5,14 +5,12 @@
     <groupId>com.example</groupId>
     <artifactId>androhid</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>apk</packaging>
+    <packaging>jar</packaging>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <android.sdk.path>${env.ANDROID_HOME}</android.sdk.path>
-        <android.sdk.platform>33</android.sdk.platform>
     </properties>
 
     <repositories>
@@ -20,46 +18,22 @@
             <id>central</id>
             <url>https://repo1.maven.org/maven2</url>
         </repository>
-        <repository>
-            <id>google</id>
-            <url>https://maven.google.com</url>
-        </repository>
     </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>central</id>
+            <url>https://repo1.maven.org/maven2</url>
+        </pluginRepository>
+    </pluginRepositories>
 
     <dependencies>
         <dependency>
-            <groupId>androidx.appcompat</groupId>
-            <artifactId>appcompat</artifactId>
-            <version>1.6.1</version>
-        </dependency>
-        <dependency>
-            <groupId>androidx.test</groupId>
-            <artifactId>core</artifactId>
-            <version>1.5.0</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.robolectric</groupId>
-            <artifactId>robolectric</artifactId>
-            <version>4.9.2</version>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>com.simpligility.maven.plugins</groupId>
-                <artifactId>android-maven-plugin</artifactId>
-                <version>4.4.1</version>
-                <extensions>true</extensions>
-                <configuration>
-                    <sdk>
-                        <platform>${android.sdk.platform}</platform>
-                        <path>${android.sdk.path}</path>
-                    </sdk>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
 </project>
+
